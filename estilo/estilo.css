@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Alumni+Sans+Collegiate+One&family=Bruno+Ace&family=Gabarito&family=Kanit:wght@300;400&family=Krona+One&family=Metal&family=Nova+Square&family=Odor+Mean+Chey&family=Roboto+Slab&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alumni+Sans+Collegiate+One&family=Bruno+Ace&family=Gabarito&family=Kanit:wght@300;400&family=Krona+One&family=Lilita+One&family=Metal&family=Nova+Square&family=Odor+Mean+Chey&family=Pacifico&family=Roboto+Slab&display=swap');
+
+:root {
+    --fonte-conteudo:'Nova Square', sans-serif;
+    --fonte-botao:'Lilita One', sans-serif;
+    --cor-primaria: rgb(235, 192, 51);
+    --cor-secundaria: rgb(214, 106, 18);
+    --cor-terciaria: rgb(170, 170, 167);
+    --cor-quartenaria: rgb(77, 76, 76);
+    --cor-quintenaria: rgb(214, 106, 18);
+    --cor-fundo: rgb(235, 239, 240);
+    --cor-destaque: rgb(231, 76, 10);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.cabecalho{
+    background-image: url(../imagens/musicalA.png);
+    width: auto;
+    height: 5.625rem;
+}
+
+.titulo{
+    background-color: var(--cor-fundo);
+    text-align: center;
+    padding-top: 1.563rem;
+    font-size: 2.938rem;
+    font-family: var(--fonte-conteudo);
+}
+
+/*destacamento do titulo principal e conteudos*/
+.destaque{
+    color: var(--cor-destaque);
+}
+
+.destaque:hover{
+    text-shadow: 2px 1px 0 var(--cor-quartenaria);
+}
+
+/*conteudo das seções elementos pai*/
+.conteudo{
+    background-color: var(--cor-fundo);
+    display: flex;
+    padding: 3.125rem 3.125rem 1.563rem 3.125rem;
+    font-family: var(--fonte-conteudo);
+    font-size: 0.938rem;
+    gap: 1.563rem;
+}
+
+.conteudoSecundario{
+    background-color: var(--cor-fundo);
+    display: flex;
+    padding: 1.563rem 3.125rem 1.563rem 3.125rem;
+    font-family: var(--fonte-conteudo);
+    font-size: 0.938rem;
+    gap: 25px;
+}
+
+.conteudoTerciario{
+    background-color: var(--cor-fundo);
+    display: flex;
+    padding: 1.563rem 3.125rem 1.563rem 3.125rem;
+    font-family: var(--fonte-conteudo);
+    font-size: 0.938rem;
+    gap: 1.563rem;
+}
+
+.conteudoQuartenario{
+    background-color: var(--cor-fundo);
+    display: flex;
+    padding: 1.563rem 3.125rem 3.125rem 3.125rem;
+    font-family: var(--fonte-conteudo);
+    font-size: 0.938rem;
+    gap: 1.563rem;
+}
+
+/*conteudos internos elementos filho, seria a opção dinâmica para dimininuição do código*/
+.conteudoInternoAmarelo{
+    text-align: center;
+    background-color: var(--cor-primaria);
+    padding: 20px 15px 20px 15px;
+    border: 8px solid var(--cor-secundaria);
+    border-radius: 0.938rem;
+}
+
+.conteudoInternoCinza{
+    text-align: center;
+    background-color: var(--cor-terciaria);
+    padding: 20px 15px 20px 15px;
+    border: 8px solid var(--cor-quartenaria);
+    border-radius: 0.938rem;
+}
+
+/*botao play musica*/
+#botaoPlay{
+    background-color: rgb(208, 201, 201);
+    width: 90px;
+    height: 25px;
+    font-family: var(--fonte-botao);
+    font-size: 0.938rem;
+    border-radius: 0.938rem;
+}
+
+#botaoPlay:hover {
+    color: var(--cor-destaque);
+    width: 95px;
+    font-size: 17px;
+}
+
+/*botao pausar musica*/
+#botaoParar{
+    background-color: var(--cor-quintenaria);
+    width: 90px;
+    height: 25px;
+    font-family: var(--fonte-botao);
+    font-size: 0.938rem;
+    border-radius: 0.938rem;
+}
+
+#botaoParar:hover {
+    color: var(--cor-primaria);
+    width: 95px;
+    font-size: 17px;
+}
+
+.rodape{
+    background-image: url(../imagens/musicalA.png);
+    width: auto;
+    height: 90px;
+}
+
+/*responsividade da pagina*/
+@media(max-width:1200px){
+.conteudo{
+    flex-direction: column;
+}
+.conteudoSecundario{
+    flex-direction: column;
+}
+.conteudoTerciario{
+    flex-direction: column;
+}
+.conteudoQuartenario{
+    flex-direction: column;
+}
+}
